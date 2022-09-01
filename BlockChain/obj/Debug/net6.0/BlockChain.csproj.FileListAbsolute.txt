@@ -1,0 +1,15 @@
+C:\Users\USUARIO\source\repos\BlockChain\BlockChain\bin\Debug\net6.0\BlockChain.exe
+C:\Users\USUARIO\source\repos\BlockChain\BlockChain\bin\Debug\net6.0\BlockChain.deps.json
+C:\Users\USUARIO\source\repos\BlockChain\BlockChain\bin\Debug\net6.0\BlockChain.runtimeconfig.json
+C:\Users\USUARIO\source\repos\BlockChain\BlockChain\bin\Debug\net6.0\BlockChain.dll
+C:\Users\USUARIO\source\repos\BlockChain\BlockChain\bin\Debug\net6.0\BlockChain.pdb
+C:\Users\USUARIO\source\repos\BlockChain\BlockChain\obj\Debug\net6.0\BlockChain.csproj.AssemblyReference.cache
+C:\Users\USUARIO\source\repos\BlockChain\BlockChain\obj\Debug\net6.0\BlockChain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\source\repos\BlockChain\BlockChain\obj\Debug\net6.0\BlockChain.AssemblyInfoInputs.cache
+C:\Users\USUARIO\source\repos\BlockChain\BlockChain\obj\Debug\net6.0\BlockChain.AssemblyInfo.cs
+C:\Users\USUARIO\source\repos\BlockChain\BlockChain\obj\Debug\net6.0\BlockChain.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\BlockChain\BlockChain\obj\Debug\net6.0\BlockChain.dll
+C:\Users\USUARIO\source\repos\BlockChain\BlockChain\obj\Debug\net6.0\refint\BlockChain.dll
+C:\Users\USUARIO\source\repos\BlockChain\BlockChain\obj\Debug\net6.0\BlockChain.pdb
+C:\Users\USUARIO\source\repos\BlockChain\BlockChain\obj\Debug\net6.0\BlockChain.genruntimeconfig.cache
+C:\Users\USUARIO\source\repos\BlockChain\BlockChain\obj\Debug\net6.0\ref\BlockChain.dll
