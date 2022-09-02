@@ -9,7 +9,7 @@ namespace Classes
 {
     public class Block
     {
-        private readonly DateTime _timeStamp;
+        public readonly DateTime _timeStamp;
         public int Index;
         public long _nonce;
         public string PreviousHash { get; set; }
@@ -39,7 +39,7 @@ namespace Classes
         {
             using (SHA256 sha256 = SHA256.Create())
             {
-                string rawData = PreviousHash + _timeStamp + Content + Index + _nonce;
+                string rawData = PreviousHash + _timeStamp + Content.Conteudo + _nonce;
                 byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(rawData));
                 return BitConverter.ToString(bytes).Replace("-", "").ToLower(); ;
             }

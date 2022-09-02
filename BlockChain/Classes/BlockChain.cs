@@ -17,9 +17,8 @@ namespace Classes
         }
         public void MineBlock(Content content)
         {
-            Block block = new Block(DateTime.Now, content,Chain.Count()-1 );
+            Block block = new Block(DateTime.Now, content,Chain.Count()-1 , Chain.Last().Hash);
             block.MineBlock(_proofOfWorkDifficulty);
-            block.PreviousHash = Chain.Last().Hash;
             Chain.Add(block);
         }
         public bool IsValidChain()
@@ -29,6 +28,9 @@ namespace Classes
                 Block previousBlock = Chain[i - 1];
                 Block currentBlock = Chain[i];
                 string HashTeste = currentBlock.CreateHash();
+                if(currentBlock.Hash != HashTeste){
+                    return false;
+                }
                 if (currentBlock.PreviousHash != previousBlock.Hash)
                     return false;
             }
