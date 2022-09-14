@@ -8,10 +8,14 @@ namespace Classes
 {
     public class Content
     {
-        public string Conteudo { get; set; }
-        public Content(string conteudo)
+        public string From { get; set; }
+        public string To { get; set; }
+        public double Amount { get; set; }
+        public Content(string from, string to, double amount)
         {
-            Conteudo = conteudo;
+            From = from;
+            To = to;
+            Amount = amount;
         }
     }
 }

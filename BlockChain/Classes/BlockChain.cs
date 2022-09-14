@@ -9,17 +9,26 @@ namespace Classes
     public class BlockChain
     {
         private readonly int _proofOfWorkDifficulty;
+        private List<Content> _pendingTransactions;
         public List<Block> Chain { get; set; }
         public BlockChain(int proofOfWorkDifficulty)
         {
             _proofOfWorkDifficulty = proofOfWorkDifficulty;
+            _pendingTransactions = new List<Content>();
             Chain = new List<Block> { CreateGenesisBlock() };
         }
-        public void MineBlock(Content content)
+        public void CreateTransaction(Content transaction)
         {
-            Block block = new Block(DateTime.Now, content,Chain.Count()-1 , Chain.Last().Hash);
+            _pendingTransactions.Add(transaction);
+        }
+        public void MineBlock()
+        {
+            Block block = new Block(DateTime.Now, _pendingTransactions, Chain.Count() - 1, Chain.Last().Hash);
             block.MineBlock(_proofOfWorkDifficulty);
             Chain.Add(block);
+            Chain.Last().MineBlock(_proofOfWorkDifficulty);
+
+            _pendingTransactions = new List<Content>();
         }
         public bool IsValidChain()
         {
@@ -36,9 +45,28 @@ namespace Classes
             }
             return true;
         }
+        public double GetBalance(string address)
+        {
+            double balance = 0;
+            foreach (Block block in Chain)
+            {
+                foreach (Content transaction in block.Content)
+                {
+                    if (transaction.From == address)
+                    {
+                        balance -= transaction.Amount;
+                    }
+                    if (transaction.To == address)
+                    {
+                        balance += transaction.Amount;
+                    }
+                }
+            }
+            return balance;
+        }
         private Block CreateGenesisBlock()
         {
-            Content transaction = new Content("Genesis");
+            List<Content> transaction =new List<Content> { new Content("", "", 0) };
             return new Block(DateTime.Now, transaction,0, "0");
         }
     }
