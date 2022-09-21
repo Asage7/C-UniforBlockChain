@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "vyd6B2coGJy1rEGzPlmoxaXjjw7r5epjK9mPGetVFql+Le34AH0nBPGwoaNgbQ1CipUV6HVzq+GQEeqz0FtVbQ==",
+  "dgSpecHash": "ksdf9vFvDxt1U1WCM2ew+30kelHuhEwDqjeL3uCGxH7EuZbgjLCLAE0XmANLglnMw+IdmunhsMolIOxc4UV6Ig==",
   "success": true,
   "projectFilePath": "C:\\Users\\USUARIO\\source\\repos\\BlockChain\\BlockChain\\BlockChain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\USUARIO\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
